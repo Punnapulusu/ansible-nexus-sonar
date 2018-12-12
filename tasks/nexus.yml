@@ -1,0 +1,6 @@
+- hosts: nexus
+  roles:
+     - include: main.yml
+  vars:
+      nexus_installation_dir: '/opt'
+#- { role: alexharvey.nexus, nexus_installation_dir: '/opt' }

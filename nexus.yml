@@ -1,0 +1,16 @@
+- hosts: Nexus
+  tasks:
+     - include: tasks/main.yml nexus_installation_dir='/opt'
+  vars:
+     nexus_installation_dir: '/opt'
+     nexus_download_dir: '/tmp'
+     nexus_version: '2.13.0-01'
+     nexus_package: 'nexus-{{ nexus_version }}-bundle.tar.gz'
+     nexus_installation_dir: '/usr/share'
+     nexus_working_dir: '/var/nexus'
+     nexus_port: 8082
+     nexus_os_user: 'nexus'
+     nexus_os_group: 'nexus'
+     nexus_os_user_shell: '/bin/bash'
+  handlers:
+    - include: handlers/main.yml
